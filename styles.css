@@ -99,23 +99,23 @@ main{
     width: 130px;
     background-color: white;
     height: 20px;
-    border-bottom-left-radius: 18px;
+    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: absolute;
     top: 0;
     left: calc(50%);
-    margin-left: -60px;
+    margin-left: -65px;
 }
 
 .mobile-toolbar{
     background-image: var(--ToolBar);
     border-radius: 10px;
     box-shadow: 0 0 5px var(--LightMagenta);
-    height: 70px;
+    height: 86px;
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
-    padding: 15px 10px;
+    padding: 10px 10px;
 }
 
 .chat-main-container{
@@ -123,42 +123,133 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: red;
+    overflow-y: scroll;
+    padding-top: 10px;
+    padding-right: 6px;
+    padding-left: 6px;
+    gap: 8px;
 }
 
 .chat-input-container{
-    height: 50px;
+    height: 60px;
     width: 100%;
-    
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+
 
 }
 
 .chat-input-container>div{
     background-color: white;
     display: flex;
+    align-items: center;
     border-radius: 100px;
+    width: 90%;
     overflow: hidden;
+    height: 34px;
+    padding-right: 4px;
+    
 }
 
-.chat-input-container>div>input{
+.chat-input-container>div>input {
     border: none;
+    flex-grow: 1;
+    font-size: 0.6rem;
+    padding-left: 10px;
+    height: 100%;
 }
+.chat-message{
+    font-size: 0.5rem;
+    max-width: 58%;
+    padding: 0px 8px;
+    color: var(--chatontheleft);
+}
+.chat-message.left {
+    background-color: #ede5f4;
+    border-radius: 8px 8px 8px 0px;
+    align-self: flex-start;
+    color: var(--chatontheleft);
+
+}
+.chat-message.right {
+    background-color: var(--White);
+    border-radius: 8px 8px 0px 8px;
+    align-self: flex-end;
+}
+
+
+.pay-message{
+    background-image: linear-gradient(45deg, var(--LightMagenta),var(--LightViolet));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.5rem;
+    border-radius: 8px 8px 8px 0px;
+    max-width: 74%;
+    color: var(--placeholdertext);
+    padding: 4px 8px;
+}
+.pay-message>.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pay-message>.right {
+    margin-right: 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: white;
+}
+.pay-message>.left>.checkbox{
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    border: 1px solid var(--placeholdertext);
+}
+
+.images-box{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 40px;
+    margin: 8px 2px;
+    gap: 8px;
+    align-self: flex-end;
+    width: 68%;
+}
+.image-container{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.image-container>img{
+    height: 100%;
+}
+
+.chat-input-container>div>input::placeholder {
+    color: var(--placeholdertext);
+}
+
+
 .mobile-toolbar>div{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 .send-button{
-    background-color: black;
-    height: 30px;
-    width: 30px;
+    background-color: var(--submitbuttonbackground);
+    height: 24px;
+    width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
+    
 }
 
 .toolbar-item {
@@ -222,4 +313,27 @@ main{
     color: var(--paragraph);
     line-height: 1.7em;
     max-width: 45ch;
+}
+
+
+@media screen and (max-width: 520px) {
+    main{
+        flex-direction: column;
+    }
+    .text-container{
+        justify-content: center;
+        text-align: center;
+    }
+    .mobile-container{
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile{
+        margin-right: 0px;
+    }
+
+
+
 }
