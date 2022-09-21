@@ -13,6 +13,7 @@
     /* Gradients */
     --LightMagenta: hsl(293, 100%, 63%);
     --LightViolet: hsl(264, 100%, 61%);
+    --ToolBar: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
 
     /* Secondary */
     --White: hsl(0, 0%, 100%);
@@ -50,23 +51,175 @@
     bottom: 0;
 }
 
+html{
+    overflow: hidden;
+}
 body{
     position: relative;
     margin:0px;
     padding:0px;
-    background-color: var(--appbackground);
+    background-color: #fafafa;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main{
+    position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main{
-    position: relative;
-    height: 60%;
+.mobile-container{
+    flex-basis: 50%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+}
+.mobile{
+    position: relative;
+    width: 248px;
+    height: 508px;
+    border: solid white 10px;
+    border-radius: 40px;
+    background-color: var(--appbackground);
+    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
 
+.mobile-camera{
+    width: 130px;
+    background-color: white;
+    height: 20px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: calc(50%);
+    margin-left: -60px;
+}
+
+.mobile-toolbar{
+    background-image: var(--ToolBar);
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--LightMagenta);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15px 10px;
+}
+
+.chat-main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.chat-input-container{
+    height: 50px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.chat-input-container>div{
+    background-color: white;
+    display: flex;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.chat-input-container>div>input{
+    border: none;
+}
+.mobile-toolbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.send-button{
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.toolbar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    border: solid white 2px;
+    overflow: hidden;
+    object-fit: contain;
+    color: white;
+    margin-right: 10px;
+}
+
+.avatar-container>img{
+    height: 100%;
+}
+
+
+.user-details{
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    line-height: 1em;
+}
+
+.user-details>*{
+    margin: 0px;
+}
+.user-details>p{
+    color: var(--SubHeadingAtTheTopOfTheAppUI);
+    font-size: 0.5rem;
+}
+
+
+
+
+
+
+
+.text-container{
+    position: relative;
+    flex-basis: 48%;
+
+}
+.text-container>h1 {
+    font-size: 2.4rem;
+    color: var(--mainheading);
+}
+
+.text-container>p {
+    color: var(--paragraph);
+    line-height: 1.7em;
+    max-width: 45ch;
 }
