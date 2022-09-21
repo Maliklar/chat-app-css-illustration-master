@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root{
+
+    /* Text */
+    --SubHeadingAtTheTopOfTheAppUI:hsl(276,100%,81%);
+    --chatontheleft:hsl(276,55%,52%);
+    --chatontheright:hsl(271,15%,43%);
+    --placeholdertext:hsl(206,6%,79%);
+    --mainheading:hsl(271,36%,24%);
+    --paragraph:hsl(270,7%,64%);
+
+    /* Gradients */
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+
+    /* Secondary */
+    --White: hsl(0, 0%, 100%);
+    --appbackground: hsl(270, 20%, 96%);
+    --submitbuttonbackground: hsl(271, 36%, 24%);
+    --radiobuttonoutline: hsl(289, 100%, 72%);
+
+    font-size: 16px;
+
+}
+
+*{
+    box-sizing:border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+.bg{
+    position: absolute;
+    height: 88vh;
+    width: 38.3vw;
+
+}
+
+#bg1{
+    background-color: #a03cff;
+    border-radius: 0 0 100% 100% ;
+    left: -9vw;
+    top: 0;
+}
+
+#bg2{
+    background-color: #f9f4fa;
+    border-radius: 100% 100% 0 0 ;
+    right: -14vw;
+    bottom: 0;
+}
+
+body{
+    position: relative;
+    margin:0px;
+    padding:0px;
+    background-color: var(--appbackground);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    position: relative;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
